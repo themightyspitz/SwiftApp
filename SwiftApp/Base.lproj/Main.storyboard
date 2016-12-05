@@ -34,24 +34,38 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4VN-tE-3BI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EcR-Jn-Jy2">
-                                <rect key="frame" x="125" y="207" width="124" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Are Buttons Cool?"/>
-                                <connections>
-                                    <action selector="coolButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TnJ-J2-G4I"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0uX-sX-yyz">
+                                <rect key="frame" x="139" y="166" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="FUS-IQ-lIA"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QXn-fO-3pD">
+                                <rect key="frame" x="139" y="233" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Q37-js-pWf"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="QXn-fO-3pD" firstAttribute="top" secondItem="0uX-sX-yyz" secondAttribute="bottom" constant="38" id="2hF-UU-mA4"/>
                             <constraint firstItem="AFf-pF-gbD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FGv-9g-ACq"/>
                             <constraint firstItem="CTx-S0-vxo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N2D-0U-3Sx"/>
                             <constraint firstItem="CTx-S0-vxo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="UV2-we-hh3"/>
+                            <constraint firstItem="0uX-sX-yyz" firstAttribute="top" secondItem="AFf-pF-gbD" secondAttribute="bottom" constant="25" id="Ut2-AW-3H2"/>
                             <constraint firstItem="AFf-pF-gbD" firstAttribute="top" secondItem="CTx-S0-vxo" secondAttribute="bottom" constant="50" id="Z7Q-vo-mSw"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="text1" destination="0uX-sX-yyz" id="TLI-VR-1pd"/>
+                        <outlet property="text2" destination="QXn-fO-3pD" id="1jl-vJ-WJo"/>
                         <outlet property="theLabel" destination="CTx-S0-vxo" id="d3p-2U-DXv"/>
                     </connections>
                 </viewController>
